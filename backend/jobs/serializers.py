@@ -8,3 +8,5 @@ class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = ['id', 'client', 'client_username', 'title', 'description', 'budget', 'created_at']
+        # Making clients read-only
+        read_only_fields = ['client']
